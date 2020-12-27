@@ -150,3 +150,4 @@ C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\net
 C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Identity.RazorTargetAssemblyInfo.cs
 C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Identity.Views.pdb
 C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Home\SignUp.cshtml.g.cs

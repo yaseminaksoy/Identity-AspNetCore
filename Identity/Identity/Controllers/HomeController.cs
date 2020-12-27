@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Identity.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,11 @@ namespace Identity.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new UserSignInViewModel());
+        }
+        public IActionResult SignUp()
+        {
+            return View(new UserSignUpViewModel());
         }
     }
 }
