@@ -1,3 +1,4 @@
+using Identity.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,6 +17,8 @@ namespace Identity
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ProjectContext>();
+            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<ProjectContext>();
             services.AddControllersWithViews();
         }
 
