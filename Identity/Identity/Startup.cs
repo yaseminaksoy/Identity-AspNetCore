@@ -18,7 +18,14 @@ namespace Identity
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ProjectContext>();
-            services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<ProjectContext>();
+            services.AddIdentity<AppUser, AppRole>(opt=>
+            {
+                opt.Password.RequireDigit = false;
+                opt.Password.RequireLowercase = false;
+                opt.Password.RequiredLength = 3;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireUppercase = false;
+            }).AddEntityFrameworkStores<ProjectContext>();
             services.AddControllersWithViews();
         }
 

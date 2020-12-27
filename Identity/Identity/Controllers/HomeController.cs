@@ -20,6 +20,15 @@ namespace Identity.Controllers
         {
             return View(new UserSignInViewModel());
         }
+        [HttpPost]
+        public IActionResult SignIn(UserSignInViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View("Index",model);
+        }
         public IActionResult SignUp()
         {
             return View(new UserSignUpViewModel());
