@@ -24,7 +24,14 @@
             <span asp-validation-for="@Model.Password" class="text-danger"></span>
             <input asp-for="@Model.Password" class="form-control" />
         </div>
-        <input type="submit" class="btn btn-primary btn-sm" value="Sign In"/>
+        <div class="form-check">
+            <input type="checkbox" asp-for="@Model.RememberMe" class="form-check-input" />
+            <label class="form-check-label" asp-for="@Model.RememberMe"> Remember me</label>
+        </div>
+        <div class="text-danger" asp-validation-summary="ModelOnly">
+
+        </div>
+        <input type="submit" class="btn btn-primary btn-sm" value="Sign In" />
         <small>Don't you have an account? <a asp-action="SignUp" class="btn btn-link btn-sm">Sign Up</a></small>
     </form>
 </body>

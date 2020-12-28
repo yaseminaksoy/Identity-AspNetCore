@@ -14,5 +14,6 @@ namespace Identity.Models
         [Display(Name = "Password: ")]
         [Required(ErrorMessage ="Please enter your password")]
         public string Password { get; set; }
+        public bool RememberMe { get; set; }
     }
 }

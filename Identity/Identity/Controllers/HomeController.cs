@@ -12,20 +12,33 @@ namespace Identity.Controllers
     public class HomeController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
-        public HomeController(UserManager<AppUser> userManager)
+        private readonly SignInManager<AppUser> _signInManager;
+        public HomeController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
         public IActionResult Index()
         {
             return View(new UserSignInViewModel());
         }
         [HttpPost]
-        public IActionResult SignIn(UserSignInViewModel model)
+        public async Task<IActionResult> SignIn(UserSignInViewModel model)
         {
             if (ModelState.IsValid)
             {
-
+                var identityResult = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, true);
+                if (identityResult.IsLockedOut)
+                {
+                    ModelState.AddModelError("", "Since you entered incorrect password for 5 times, your account has been locked out");
+                    return View("Index", model);
+                }
+                if (identityResult.Succeeded)
+                {
+                    return RedirectToAction("Index", "Panel");
+                }
+                var incorrectEnterCount = await _userManager.GetAccessFailedCountAsync( await _userManager.FindByNameAsync(model.UserName));
+                ModelState.AddModelError("", $"Incorrect Username or Password. You have {5-incorrectEnterCount} more chance");
             }
             return View("Index",model);
         }
@@ -48,7 +61,7 @@ namespace Identity.Controllers
                var result = await _userManager.CreateAsync(user,model.Password);
                 if (result.Succeeded)
                 {
-                    RedirectToAction("Index");
+                    return RedirectToAction("Index");
                 }
                 else
                 {

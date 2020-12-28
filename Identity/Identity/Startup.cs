@@ -26,6 +26,14 @@ namespace Identity
                 opt.Password.RequireNonAlphanumeric = false;
                 opt.Password.RequireUppercase = false;
             }).AddEntityFrameworkStores<ProjectContext>();
+            services.ConfigureApplicationCookie(opt =>
+            {
+                opt.Cookie.HttpOnly = true;
+                opt.Cookie.Name = "IdentityCookie";
+                opt.Cookie.SameSite = SameSiteMode.Strict;
+                opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+                opt.ExpireTimeSpan = TimeSpan.FromDays(20);
+            });
             services.AddControllersWithViews();
         }
 
