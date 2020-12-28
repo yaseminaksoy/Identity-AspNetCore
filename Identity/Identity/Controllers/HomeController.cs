@@ -30,7 +30,12 @@ namespace Identity.Controllers
                 var identityResult = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, true);
                 if (identityResult.IsLockedOut)
                 {
-                    ModelState.AddModelError("", "Since you entered incorrect password for 5 times, your account has been locked out");
+                    var result = await _userManager.GetLockoutEndDateAsync(await _userManager.FindByNameAsync(model.UserName));
+                    var limitedTime = result.Value;
+                    var remainingMinutes = limitedTime.Minute - DateTime.Now.Minute;
+
+                    ModelState.AddModelError("", $"Since you entered incorrect password for 3 times, your account has been locked out for {remainingMinutes} min");
+                    
                     return View("Index", model);
                 }
                 if (identityResult.Succeeded)
@@ -38,7 +43,7 @@ namespace Identity.Controllers
                     return RedirectToAction("Index", "Panel");
                 }
                 var incorrectEnterCount = await _userManager.GetAccessFailedCountAsync( await _userManager.FindByNameAsync(model.UserName));
-                ModelState.AddModelError("", $"Incorrect Username or Password. You have {5-incorrectEnterCount} more chance");
+                ModelState.AddModelError("", $"Incorrect Username or Password. You have {3-incorrectEnterCount} more chance");
             }
             return View("Index",model);
         }

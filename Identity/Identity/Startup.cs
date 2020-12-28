@@ -25,6 +25,9 @@ namespace Identity
                 opt.Password.RequiredLength = 3;
                 opt.Password.RequireNonAlphanumeric = false;
                 opt.Password.RequireUppercase = false;
+
+                opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+                opt.Lockout.MaxFailedAccessAttempts = 3;
             }).AddEntityFrameworkStores<ProjectContext>();
             services.ConfigureApplicationCookie(opt =>
             {
