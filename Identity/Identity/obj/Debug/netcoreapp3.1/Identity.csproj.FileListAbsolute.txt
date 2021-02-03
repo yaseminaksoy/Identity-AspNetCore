@@ -156,3 +156,4 @@ C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\net
 C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Panel\UpdateUser.cshtml.g.cs
 C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Role\Index.cshtml.g.cs
 C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Role\AddRole.cshtml.g.cs
+C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Role\UpdateRole.cshtml.g.cs

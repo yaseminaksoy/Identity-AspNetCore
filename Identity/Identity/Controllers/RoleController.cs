@@ -31,7 +31,7 @@ namespace Identity.Controllers
         {
             if (ModelState.IsValid)
             {
-                AppRole role = new AppRole()
+                AppRole role = new AppRole
                 {
                     Name = model.Name
                 };
@@ -44,6 +44,33 @@ namespace Identity.Controllers
                 {
                     ModelState.AddModelError("", item.Description);
                 }
+            }
+            return View(model);
+        }
+        public IActionResult UpdateRole(int id)
+        {
+            var role = _roleManager.Roles.FirstOrDefault(I => I.Id == id);
+            RoleUpdateViewModel model = new RoleUpdateViewModel
+            {
+                Id = role.Id,
+                Name = role.Name
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateRole(RoleUpdateViewModel model)
+        {
+            var role = _roleManager.Roles.FirstOrDefault(I => I.Id == model.Id);
+            role.Name = model.Name;
+            var result = await _roleManager.UpdateAsync(role);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index");
+            }
+            foreach (var item in result.Errors)
+            {
+                ModelState.AddModelError("", item.Description);
             }
             return View(model);
         }
