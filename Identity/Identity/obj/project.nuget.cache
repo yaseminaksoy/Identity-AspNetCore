@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UPymnBxLdJHY4yBo9np8Lq7mKMK58Xo42v01esHP26q/46XmX7ZLZoVC0PCEXz/c9VRHIgZiNFWTy13SMn9pYg==",
+  "dgSpecHash": "d/ZNifk2uOBSXjlEYpw4oHvfyRukSDWENlmgi5DjCE6aTXoblb6IdnQLoIUh5S/1KJCFxe0e6mqbud6wJbUJjA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Asus\\Desktop\\github\\Identity-AspNetCore\\Identity\\Identity\\Identity.csproj",
   "expectedPackageFiles": [
@@ -186,9 +186,7 @@
     "C:\\Users\\Asus\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+    "C:\\Users\\Asus\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
