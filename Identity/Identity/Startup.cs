@@ -28,6 +28,8 @@ namespace Identity
 
                 opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
                 opt.Lockout.MaxFailedAccessAttempts = 3;
+
+                //opt.SignIn.RequireConfirmedEmail = true;
             }).AddEntityFrameworkStores<ProjectContext>();
             services.ConfigureApplicationCookie(opt =>
             {

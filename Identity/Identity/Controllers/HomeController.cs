@@ -38,6 +38,13 @@ namespace Identity.Controllers
                     
                     return View("Index", model);
                 }
+
+                if (identityResult.IsNotAllowed)
+                {
+                    ModelState.AddModelError("", "Please confirm your email");
+                    return View("Index", model);
+                }
+
                 if (identityResult.Succeeded)
                 {
                     return RedirectToAction("Index", "Panel");
