@@ -74,5 +74,16 @@ namespace Identity.Controllers
             }
             return View(model);
         }
+        public async Task<IActionResult> DeleteRole(int id)
+        {
+            var role = _roleManager.Roles.FirstOrDefault(I=>I.Id==id);
+            var result = await _roleManager.DeleteAsync(role);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Index");
+            }
+            TempData["Errors"] = result.Errors;
+            return RedirectToAction("Index");
+        }
     }
 }
