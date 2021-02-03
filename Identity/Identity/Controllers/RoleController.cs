@@ -14,9 +14,11 @@ namespace Identity.Controllers
     public class RoleController : Controller
     {
         private readonly RoleManager<AppRole> _roleManager;
-        public RoleController(RoleManager<AppRole> roleManager)
+        private readonly UserManager<AppUser> _userManager;
+        public RoleController(RoleManager<AppRole> roleManager, UserManager<AppUser> userManager)
         {
             _roleManager = roleManager;
+            _userManager = userManager;
         }
         public IActionResult Index()
         {
@@ -84,6 +86,10 @@ namespace Identity.Controllers
             }
             TempData["Errors"] = result.Errors;
             return RedirectToAction("Index");
+        }
+        public IActionResult UserList()
+        {
+            return View(_userManager.Users.ToList());
         }
     }
 }
