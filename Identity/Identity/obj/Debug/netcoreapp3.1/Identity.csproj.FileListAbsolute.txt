@@ -159,3 +159,6 @@ C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\net
 C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Role\UpdateRole.cshtml.g.cs
 C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Role\UserList.cshtml.g.cs
 C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Role\AssignRole.cshtml.g.cs
+C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Developer\Index.cshtml.g.cs
+C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\obj\Debug\netcoreapp3.1\Razor\Views\Home\AccessDenied.cshtml.g.cs
