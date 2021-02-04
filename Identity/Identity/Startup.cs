@@ -41,6 +41,9 @@ namespace Identity
                 opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
                 opt.ExpireTimeSpan = TimeSpan.FromDays(20);
             });
+
+            services.AddAuthorization(opt=> { opt.AddPolicy("FemalePolicy", cnf => { cnf.RequireClaim("gender", "female"); }); });
+
             services.AddControllersWithViews();
         }
 
