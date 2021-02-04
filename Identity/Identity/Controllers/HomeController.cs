@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Identity.Controllers
 {
+    [AutoValidateAntiforgeryToken] //for security on every post methods in controller
     public class HomeController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -23,6 +24,7 @@ namespace Identity.Controllers
             return View(new UserSignInViewModel());
         }
         [HttpPost]
+        //[ValidateAntiForgeryToken] //for security only for this method
         public async Task<IActionResult> SignIn(UserSignInViewModel model)
         {
             if (ModelState.IsValid)
