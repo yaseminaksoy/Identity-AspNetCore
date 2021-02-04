@@ -13,21 +13,21 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
-#line 2 "C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\Views\_ViewImports.cshtml"
+#line 3 "C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\Views\_ViewImports.cshtml"
 using Identity.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\Views\_ViewImports.cshtml"
+#line 4 "C:\Users\Asus\Desktop\github\Identity-AspNetCore\Identity\Identity\Views\_ViewImports.cshtml"
 using Identity.Context;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"767f7065e4b29342e7634b65be71e938cd85fa4e", @"/Views/Role/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4339a09995342e0c6fbaae4b836ee07b1899b7ea", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a58c8db5d6fc88c0c57b3f696c06bc16d96fdbf9", @"/Views/_ViewImports.cshtml")]
     public class Views_Role_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<AppRole>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "AddRole", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
